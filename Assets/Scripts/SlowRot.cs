@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class SlowRot : MonoBehaviour
@@ -13,5 +12,6 @@ public class SlowRot : MonoBehaviour
         _direction = (target.position - transform.position).normalized;
         _rotGoal = Quaternion.LookRotation(_direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, _rotGoal, turnSpeed);
+        //transform.rotation = _rotGoal;
     }
 }
